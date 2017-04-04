@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <form name="modal" id="modal" onsubmit="return false;">
+                <input type="hidden" name="id" value="">
+                
+                <div class="deleteMsg">
+                    <p>Are you sure you want to delete it?</p>
+                </div>
+                
+                <button class="btnYN" type="button" onclick="remove()">
+                    Yes
+                </button>
+                <button class="btnYN" type="button" onclick="closeModal()">
+                    No
+                </button>
+            </form>
+
+            <h1>Notes</h1>
+
+            <form name="writeView" id="writeView" onsubmit="return false;">
+                <input type="hidden" name="id" value="">
+                
+                <div class="bgTrans">
+                    <input type="text" name="title" value="" maxlength="50" placeholder="Title">
+                
+                    <textarea name="note" maxlength="500" placeholder="Note"></textarea>
+                </div>
+
+
+                <div class="btns">
+                    <button class="btnForm" type="button" onclick="save()">
+                                    Save
+                                </button>
+                    <button class="btnForm" type="button" onclick="closeForm()">
+                                    Cancel
+                                </button>
+                </div>
+            </form>
+
+            <div id="listView">
+                <button id="add" type="button" onclick="openForm()">+</button>
+                
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
